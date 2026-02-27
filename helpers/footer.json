@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "name": "Mortugaba Tech",
+    "description": "Conectando pessoas e tecnologia para transformar Mortugaba através da inovação."
+  },
+  "quickLinksTitle": "Links Rápidos",
+  "quickLinks": [
+    { "label": "Sobre", "href": "#sobre" },
+    { "label": "Projetos", "href": "#projetos" },
+    { "label": "Membros", "href": "#membros" },
+    { "label": "Participar", "href": "#participar" }
+  ],
+  "socialTitle": "Redes Sociais",
+  "socialLinks": [
+    { "name": "github", "href": "#" },
+    { "name": "twitter", "href": "#" },
+    { "name": "instagram", "href": "#" }
+  ],
+  "contactTitle": "Contato",
+  "contact": {
+    "email": "contato@mortugabatech.com"
+  },
+  "copyright": "© 2026 Mortugaba Tech. Todos os direitos reservados."
+}

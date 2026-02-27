@@ -1,0 +1,16 @@
+{
+  "title": "Conectando tecnologia e inovação em Mortugaba",
+  "description": "Uma comunidade vibrante de desenvolvedores, designers e entusiastas de tecnologia trabalhando juntos para transformar a região através da inovação digital.",
+  "primaryCta": {
+    "label": "Começar Agora",
+    "href": "#participar"
+  },
+  "secondaryCta": {
+    "label": "Saiba Mais",
+    "href": "#sobre"
+  },
+  "image": {
+    "src": "https://images.unsplash.com/photo-1771423713116-f56e578f035f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    "alt": "Mortugaba - Bahia"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "brand": "Mortugaba Tech",
+  "links": [
+    { "label": "Sobre", "href": "#sobre" },
+    { "label": "Projetos", "href": "#projetos" },
+    { "label": "Membros", "href": "#membros" },
+    { "label": "Participar", "href": "#participar" }
+  ],
+  "cta": {
+    "label": "Entrar na Comunidade",
+    "href": "#participar"
+  }
+}
