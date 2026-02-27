@@ -78,21 +78,21 @@ function IconMail() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-800 bg-[#0a0f1a] py-16">
+    <footer className="border-t border-border-muted bg-surface-footer py-16">
       <div className="mx-auto w-full max-w-[1200px] px-6">
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-xl font-semibold text-[#F3F4F6]">{footerData.brand.name}</h3>
-            <p className="text-sm leading-relaxed text-[#9CA3AF]">{footerData.brand.description}</p>
+            <h3 className="mb-4 text-xl font-semibold text-text-primary">{footerData.brand.name}</h3>
+            <p className="text-sm leading-relaxed text-text-secondary">{footerData.brand.description}</p>
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold text-[#F3F4F6]">{footerData.quickLinksTitle}</h4>
+            <h4 className="mb-4 font-semibold text-text-primary">{footerData.quickLinksTitle}</h4>
             <ul className="space-y-2">
               {footerData.quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
-                    className="text-sm text-[#9CA3AF] transition-colors hover:text-[#C2A56B]"
+                    className="text-sm text-text-secondary transition-colors hover:text-brand-accent"
                     href={link.href}
                   >
                     {link.label}
@@ -103,12 +103,12 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold text-[#F3F4F6]">{footerData.socialTitle}</h4>
+            <h4 className="mb-4 font-semibold text-text-primary">{footerData.socialTitle}</h4>
             <div className="flex gap-4">
               {footerData.socialLinks.map((social) => (
                 <a
                   key={social.name}
-                  className="text-[#9CA3AF] transition-colors hover:text-[#C2A56B]"
+                  className="text-text-secondary transition-colors hover:text-brand-accent"
                   href={social.href}
                 >
                   {social.name === "github" && <IconGithub />}
@@ -120,10 +120,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold text-[#F3F4F6]">{footerData.contactTitle}</h4>
+            <h4 className="mb-4 font-semibold text-text-primary">{footerData.contactTitle}</h4>
             <a
               href={`mailto:${footerData.contact.email}`}
-              className="flex items-center gap-2 text-sm text-[#9CA3AF] transition-colors hover:text-[#C2A56B]"
+              className="flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-brand-accent"
             >
               <IconMail />
               {footerData.contact.email}
@@ -131,8 +131,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-sm text-[#9CA3AF]">{footerData.copyright}</p>
+        <div className="border-t border-border-muted pt-8 text-center">
+          <p className="text-sm text-text-secondary">{footerData.copyright}</p>
         </div>
       </div>
     </footer>

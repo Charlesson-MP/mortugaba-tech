@@ -1,22 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0f172a;
+  --foreground: #f3f4f6;
+  --surface-base: #0f172a;
+  --surface-alt: #111827;
+  --surface-footer: #0a0f1a;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --brand-primary: #166534;
+  --brand-primary-hover: #15803d;
+  --brand-accent: #c2a56b;
+  --brand-accent-hover: #d4b87d;
+  --border-muted: #1f2937;
+  --overlay-dark: rgb(0 0 0 / 0.3);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface-base: var(--surface-base);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-footer: var(--surface-footer);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-hover: var(--brand-accent-hover);
+  --color-border-muted: var(--border-muted);
+  --color-overlay-dark: var(--overlay-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

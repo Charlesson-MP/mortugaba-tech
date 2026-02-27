@@ -16,15 +16,15 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-[#0F172A]">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border-muted bg-surface-base">
       <div className="mx-auto flex h-[72px] w-full max-w-[1200px] items-center justify-between px-6">
-        <div className="text-xl font-semibold text-[#F3F4F6]">{headerData.brand}</div>
+        <div className="text-xl font-semibold text-text-primary">{headerData.brand}</div>
 
         <nav className="hidden items-center gap-8 md:flex">
           {headerData.links.map((link) => (
             <a
               key={link.href}
-              className="text-[#F3F4F6] transition-colors hover:text-[#C2A56B]"
+              className="text-text-primary transition-colors hover:text-brand-accent"
               href={link.href}
             >
               {link.label}
@@ -37,7 +37,7 @@ export function Header() {
         </Button>
 
         <button
-          className="text-[#F3F4F6] md:hidden"
+          className="text-text-primary md:hidden"
           type="button"
           onClick={handleToggleMenu}
           aria-label={isMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
@@ -72,12 +72,12 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div id="mobile-menu" className="border-t border-gray-800 bg-[#0F172A] md:hidden">
+        <div id="mobile-menu" className="border-t border-border-muted bg-surface-base md:hidden">
           <nav className="mx-auto flex w-full max-w-[1200px] flex-col gap-4 px-6 py-4">
             {headerData.links.map((link) => (
               <a
                 key={link.href}
-                className="text-[#F3F4F6] transition-colors hover:text-[#C2A56B]"
+                className="text-text-primary transition-colors hover:text-brand-accent"
                 href={link.href}
                 onClick={handleCloseMenu}
               >

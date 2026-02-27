@@ -22,11 +22,11 @@ type ButtonProps = LinkButtonProps | ActionButtonProps;
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "rounded-lg bg-[#166534] text-[#F3F4F6] transition-colors hover:bg-[#15803d]",
+    "rounded-lg bg-brand-primary text-text-primary transition-colors hover:bg-brand-primary-hover",
   outline:
-    "rounded-lg border border-[#C2A56B] text-[#C2A56B] transition-colors hover:bg-[#C2A56B] hover:text-[#0F172A]",
-  text: "text-[#C2A56B] transition-colors hover:text-[#d4b87d]",
-  textSmall: "text-sm text-[#C2A56B] transition-colors hover:text-[#d4b87d]",
+    "rounded-lg border border-brand-accent text-brand-accent transition-colors hover:bg-brand-accent hover:text-surface-base",
+  text: "text-brand-accent transition-colors hover:text-brand-accent-hover",
+  textSmall: "text-sm text-brand-accent transition-colors hover:text-brand-accent-hover",
 };
 
 function joinClasses(...classes: Array<string | undefined>) {

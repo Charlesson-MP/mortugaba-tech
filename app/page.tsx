@@ -9,7 +9,7 @@ import { Projects } from "./components/Home/Projects";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0F172A]">
+    <div className="min-h-screen bg-surface-base">
       <Header />
       <main>
         <Hero />
