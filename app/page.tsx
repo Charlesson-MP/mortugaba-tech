@@ -6,6 +6,7 @@ import { HowToJoin } from "./components/Home/HowToJoin";
 import { Members } from "./components/Home/Members";
 import { Projects } from "./components/Home/Projects";
 
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#0F172A]">
