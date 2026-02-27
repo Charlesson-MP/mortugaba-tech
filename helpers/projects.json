@@ -1,0 +1,26 @@
+{
+  "title": "Projetos da Região",
+  "items": [
+    {
+      "title": "Portal da Transparência Municipal",
+      "description": "Plataforma web para facilitar o acesso dos cidadãos às informações públicas do município.",
+      "image": "https://images.unsplash.com/photo-1596496555041-9e0f141ca4b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "tags": ["React", "Node.js", "PostgreSQL"],
+      "actionLabel": "Ver detalhes"
+    },
+    {
+      "title": "App de Agricultura Digital",
+      "description": "Sistema de monitoramento para pequenos agricultores da região gerenciarem suas produções.",
+      "image": "https://images.unsplash.com/photo-1643290274113-1ff22efe2ce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "tags": ["Mobile", "IoT", "Firebase"],
+      "actionLabel": "Ver detalhes"
+    },
+    {
+      "title": "Sistema de Gestão Escolar",
+      "description": "Ferramenta para digitalizar processos administrativos das escolas locais.",
+      "image": "https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "tags": ["Vue.js", "Python", "MySQL"],
+      "actionLabel": "Ver detalhes"
+    }
+  ]
+}
