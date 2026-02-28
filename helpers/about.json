@@ -1,0 +1,23 @@
+{
+  "title": "Sobre o Mortugaba Tech",
+  "items": [
+    {
+      "title": "Aprendizado Contínuo",
+      "description": "Workshops, mentorias e eventos para desenvolver suas habilidades em tecnologia.",
+      "actionLabel": "Ver programação",
+      "icon": "code"
+    },
+    {
+      "title": "Networking Regional",
+      "description": "Conecte-se com profissionais da região e construa uma rede sólida de contatos.",
+      "actionLabel": "Conhecer membros",
+      "icon": "users"
+    },
+    {
+      "title": "Projetos Reais",
+      "description": "Participe de projetos que geram impacto real na comunidade de Mortugaba.",
+      "actionLabel": "Explorar projetos",
+      "icon": "rocket"
+    }
+  ]
+}

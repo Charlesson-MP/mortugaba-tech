@@ -1,0 +1,29 @@
+{
+  "title": "Membros da Comunidade",
+  "items": [
+    {
+      "name": "Ana Silva",
+      "role": "Front-end Developer",
+      "image": "https://images.unsplash.com/photo-1649730829626-dd84b2c694df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "actionLabel": "Ver perfil"
+    },
+    {
+      "name": "Carlos Santos",
+      "role": "Back-end Engineer",
+      "image": "https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "actionLabel": "Ver perfil"
+    },
+    {
+      "name": "Mariana Costa",
+      "role": "UX/UI Designer",
+      "image": "https://images.unsplash.com/photo-1580894732930-0babd100d356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "actionLabel": "Ver perfil"
+    },
+    {
+      "name": "Pedro Oliveira",
+      "role": "Full-stack Developer",
+      "image": "https://images.unsplash.com/photo-1735815582264-860de29c594f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "actionLabel": "Ver perfil"
+    }
+  ]
+}
