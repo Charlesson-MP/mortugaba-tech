@@ -78,7 +78,7 @@ function IconMail() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-muted bg-surface-footer py-16">
+    <footer className="border-t border-border-muted bg-surface-footer py-6">
       <div className="mx-auto w-full max-w-[1200px] px-6">
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div>
@@ -119,7 +119,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="mb-4 font-semibold text-text-primary">{footerData.contactTitle}</h4>
             <a
               href={`mailto:${footerData.contact.email}`}
@@ -128,7 +128,7 @@ export function Footer() {
               <IconMail />
               {footerData.contact.email}
             </a>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-border-muted pt-8 text-center">

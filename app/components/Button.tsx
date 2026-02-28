@@ -24,7 +24,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "rounded-lg bg-brand-primary text-text-primary transition-colors hover:bg-brand-primary-hover",
   outline:
-    "rounded-lg border border-brand-accent text-brand-accent transition-colors hover:bg-brand-accent hover:text-surface-base",
+    "rounded-lg border text-text-primary border-text-primary/15 hover:border-text-primary/60",
   text: "text-brand-accent transition-colors hover:text-brand-accent-hover",
   textSmall: "text-sm text-brand-accent transition-colors hover:text-brand-accent-hover",
 };

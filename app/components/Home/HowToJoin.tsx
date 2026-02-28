@@ -3,7 +3,7 @@ import howToJoinData from "@/helpers/how-to-join.json";
 
 export function HowToJoin() {
   return (
-    <section id="participar" className="bg-surface-alt py-16">
+    <section id="participar" className="bg-surface-alt py-6">
       <div className="mx-auto w-full max-w-[1200px] px-6">
         <h2 className="mb-16 text-center text-[24px] font-semibold text-text-primary md:text-[36px]">
           {howToJoinData.title}

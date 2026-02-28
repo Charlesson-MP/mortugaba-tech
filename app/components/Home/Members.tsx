@@ -4,7 +4,7 @@ import membersData from "@/helpers/members.json";
 
 export function Members() {
   return (
-    <section id="membros" className="bg-surface-alt py-16">
+    <section id="membros" className="bg-surface-alt py-6">
       <div className="mx-auto w-full max-w-[1200px] px-6">
         <h2 className="mb-16 text-center text-[24px] font-semibold text-text-primary md:text-[36px]">
           {membersData.title}

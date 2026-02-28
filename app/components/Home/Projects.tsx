@@ -4,7 +4,7 @@ import projectsData from "@/helpers/projects.json";
 
 export function Projects() {
   return (
-    <section id="projetos" className="bg-surface-base py-16">
+    <section id="projetos" className="bg-surface-base py-6">
       <div className="mx-auto w-full max-w-[1200px] px-6">
         <h2 className="mb-16 text-center text-[24px] font-semibold text-text-primary md:text-[36px]">
           {projectsData.title}
