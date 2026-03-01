@@ -93,14 +93,27 @@ export function About() {
           {aboutData.title}
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          {items.map((item) => {
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
+          {items.map((item, index) => {
             const isRoute = item.actionType === "route" && item.href;
+            const isLast = index === items.length - 1;
+
+            // Lógica para centralizar o último card se ele estiver sozinho na linha
+            // No md (2 colunas), centraliza se for um índice par (0, 2, 4...) sendo o último
+            const mdCentering = isLast && index % 2 === 0 ? "md:col-start-4" : "";
+            // No lg (3 colunas), centraliza se for o primeiro de uma nova linha (índice 3, 6...) sendo o último
+            const lgCentering = isLast && index % 3 === 0 ? "lg:col-start-5" : "lg:col-start-auto";
 
             return (
               <div
                 key={item.title}
-                className="rounded-xl border border-border-muted bg-surface-base p-8 transition-shadow hover:shadow-lg hover:shadow-black/20"
+                className={[
+                  "rounded-xl border border-border-muted bg-surface-base p-6 lg:p-8 transition-shadow hover:shadow-lg hover:shadow-black/20",
+                  "flex flex-col",
+                  "col-span-1 md:col-span-6 lg:col-span-4",
+                  mdCentering,
+                  lgCentering,
+                ].join(" ")}
               >
                 <div className="mb-6">{getIcon(item.icon)}</div>
                 <h3 className="mb-4 text-xl font-semibold text-text-primary">{item.title}</h3>
@@ -125,6 +138,7 @@ export function About() {
                       setActiveItem(item);
                       setOpen(true);
                     }}
+                    className="text-left"
                   >
                     {item.actionLabel} →
                   </Button>
@@ -148,10 +162,11 @@ export function About() {
           aria-labelledby="about-modal-title"
         >
           <div
-            className="w-full max-w-2xl rounded-2xl border border-border-muted bg-surface-base p-6 shadow-xl"
+            className="flex w-full max-w-2xl max-h-[calc(100dvh-48px)] flex-col overflow-hidden rounded-2xl border border-border-muted bg-surface-base shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-start justify-between gap-4">
+            {/* Header Sticky */}
+            <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-border-muted/30 bg-surface-base p-6">
               <div>
                 <div className="mb-3">{getIcon(activeItem.icon)}</div>
                 <h3 id="about-modal-title" className="text-xl font-semibold text-text-primary">
@@ -172,9 +187,12 @@ export function About() {
               </button>
             </div>
 
-            <p className="mt-4 leading-relaxed text-text-secondary whitespace-pre-line">
-              {activeItem.description}
-            </p>
+            {/* Body rolável */}
+            <div className="flex-1 overflow-y-auto p-6 pt-2">
+              <p className="leading-relaxed text-text-secondary whitespace-pre-line">
+                {activeItem.description}
+              </p>
+            </div>
           </div>
         </div>
       )}
