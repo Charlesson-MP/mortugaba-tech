@@ -1,12 +1,25 @@
 {
   "title": "Como Participar",
+  "subtitle": "Quer fazer parte da Mortugaba Tech? É simples e rápido.",
   "steps": [
-    "Preencha o formulário de interesse em nossa comunidade",
-    "Participe de um evento de integração para conhecer os membros",
-    "Escolha um projeto ou inicie sua própria iniciativa",
-    "Contribua ativamente e colabore com outros membros"
+    {
+      "title": "Preencha seus dados",
+      "description": "Informe seu nome, área de interesse e nível de experiência."
+    },
+    {
+      "title": "Aguarde a confirmação",
+      "description": "Você verá uma mensagem confirmando que recebemos suas informações."
+    },
+    {
+      "title": "Receba o link do grupo",
+      "description": "Em breve, enviaremos o convite para entrar no grupo da comunidade."
+    },
+    {
+      "title": "Conecte-se à comunidade",
+      "description": "Entre, participe das conversas e comece a se integrar com a galera."
+    }
   ],
   "cta": {
-    "label": "Inscrever-se Agora"
+    "label": "Quero participar"
   }
 }
