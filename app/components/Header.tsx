@@ -32,6 +32,17 @@ export function Header() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [isMenuOpen]);
 
+  const handleAnchorClick = (e: React.MouseEvent<HTMLElement>, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.getElementById(href.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.history.pushState(null, "", href);
+      }
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border-muted bg-surface-base">
       <div className="mx-auto flex h-[72px] w-full max-w-[1200px] items-center justify-between px-6">
@@ -49,13 +60,14 @@ export function Header() {
               key={link.href}
               className="text-text-primary font-semibold transition-colors hover:text-brand-primary-hover"
               href={link.href}
+              onClick={(e) => handleAnchorClick(e, link.href)}
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <Button href={headerData.cta.href} className="hidden px-6 py-2.5 lg:block">
+        <Button href={headerData.cta.href} className="hidden px-6 py-2.5 lg:block" onClick={(e) => handleAnchorClick(e, headerData.cta.href)}>
           {headerData.cta.label}
         </Button>
 
@@ -127,7 +139,10 @@ export function Header() {
               key={link.href}
               className="text-text-primary transition-colors hover:text-brand-accent"
               href={link.href}
-              onClick={handleCloseMenu}
+              onClick={(e) => {
+                handleAnchorClick(e, link.href);
+                handleCloseMenu();
+              }}
             >
               {link.label}
             </a>
@@ -136,7 +151,10 @@ export function Header() {
           <Button
             className="mt-2 block px-6 py-2.5 text-center"
             href={headerData.cta.href}
-            onClick={handleCloseMenu}
+            onClick={(e) => {
+              handleAnchorClick(e, headerData.cta.href);
+              handleCloseMenu();
+            }}
           >
             {headerData.cta.label}
           </Button>

@@ -3,21 +3,26 @@
   "items": [
     {
       "title": "História",
-      "description": "Workshops, mentorias e eventos para desenvolver suas habilidades em tecnologia.",
-      "actionLabel": "Ver programação",
-      "icon": "code"
+      "description": "A Mortugaba Tech nasceu de algo simples: conexão.\n\nPercebendo o crescimento do interesse pela área de tecnologia em Mortugaba, Marcelo e João Pedro decidiram criar um grupo no WhatsApp para reunir pessoas que já atuavam ou queriam entrar no mundo tech. No início, a proposta era despretensiosa — trocar ideias, conversar sobre tecnologia e fortalecer laços.\n\nCom o tempo, as conversas começaram a ganhar direção. Foi então que Charlesson, que vem aprofundando seus conhecimentos em desenvolvimento web, sugeriu criar uma página para representar o grupo. A ideia foi abraçada por todos.\n\nDesde então, o que era apenas um grupo de conversa começou a tomar forma como um time. Hoje, a Mortugaba Tech está dando seus primeiros passos como uma iniciativa colaborativa — com o objetivo de se tornar não apenas um grupo de amigos interessados por tecnologia, mas uma comunidade em busca de movimentar ainda mais a área tech em nossa região.\n\nEstamos só começando — e isso é o mais empolgante.",
+      "actionLabel": "Ler mais",
+      "icon": "code",
+      "actionType": "modal"
     },
     {
       "title": "Networking Regional",
       "description": "Conecte-se com profissionais da região e construa uma rede sólida de contatos.",
       "actionLabel": "Conhecer membros",
-      "icon": "users"
+      "icon": "users",
+      "actionType": "route",
+      "href": "#membros"
     },
     {
       "title": "Projetos Reais",
       "description": "Participe de projetos que geram impacto real na comunidade de Mortugaba.",
       "actionLabel": "Explorar projetos",
-      "icon": "rocket"
+      "icon": "rocket",
+      "actionType": "route",
+      "href": "#projetos"
     }
   ]
 }

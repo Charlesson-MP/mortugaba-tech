@@ -6,7 +6,7 @@ type BaseButtonProps = {
   children: ReactNode;
   className?: string;
   variant?: ButtonVariant;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
 };
 
 type LinkButtonProps = BaseButtonProps & {
