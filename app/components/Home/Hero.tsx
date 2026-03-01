@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/app/components/Button";
 import heroData from "@/helpers/hero.json";
