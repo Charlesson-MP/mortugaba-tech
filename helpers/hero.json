@@ -1,8 +1,9 @@
 {
-  "title": "Conectando tecnologia e inovação em Mortugaba",
-  "description": "Uma comunidade vibrante de desenvolvedores, designers e entusiastas de tecnologia trabalhando juntos para transformar a região através da inovação digital.",
+  "title": "Conectando Mortugaba ao Futuro da Tecnologia",
+  "span": "Inovação no Sertão Baiano",
+  "description": "Uma rede profissional exclusiva para desenvolvedores, designers e entusiastas de tecnologia focada em impulsionar o ecossistema digital da nossa região.",
   "primaryCta": {
-    "label": "Começar Agora",
+    "label": "Participar",
     "href": "#participar"
   },
   "secondaryCta": {

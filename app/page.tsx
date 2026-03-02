@@ -1,5 +1,4 @@
 import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
 import { About } from "./components/Home/About";
 import { Hero } from "./components/Home/Hero";
 import { HowToJoin } from "./components/Home/HowToJoin";
@@ -10,7 +9,6 @@ import { Projects } from "./components/Home/Projects";
 export default function Home() {
   return (
     <div className="min-h-screen bg-surface-base">
-      <Header />
       <main>
         <Hero />
         <About />
