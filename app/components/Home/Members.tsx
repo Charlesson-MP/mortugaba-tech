@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/app/components/ui/Button";
 import MemberCard, { Member } from "@/app/components/ui/MemberCard";
 import MemberModal from "@/app/components/ui/MemberCardModal";
 import membersData from "@/helpers/members.json";
@@ -22,6 +23,16 @@ export function Members() {
           {membersData.items.map((member) => (
             <MemberCard key={member.id} member={member as Member} onOpen={(m) => setSelected(m)} />
           ))}
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <Button
+            href="/membros"
+            variant="rounded"
+            className="px-8 py-3 text-sm font-semibold tracking-wide shadow-lg shadow-brand-primary/10 transition-all hover:shadow-brand-primary/20"
+          >
+            Ver todos os membros
+          </Button>
         </div>
       </div>
 
