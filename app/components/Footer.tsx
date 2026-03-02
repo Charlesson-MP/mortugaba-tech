@@ -1,14 +1,68 @@
-"use client";
-
 import footerData from "@/helpers/footer.json";
-import Image from "next/image";
+
+function IconGithub() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
+    </svg>
+  );
+}
+
+function IconTwitter() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+    </svg>
+  );
+}
+
+function IconInstagram() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
 
 function IconMail() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -22,43 +76,14 @@ function IconMail() {
   );
 }
 
-function IconWhatsapp() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.669.15-.198.297-.768.966-.941 1.164-.174.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.762-1.653-2.059-.174-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.496.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.207-.242-.58-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.214 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.174-1.413-.075-.124-.273-.198-.57-.347zM12.06 2.003c-5.5 0-9.98 4.48-9.98 9.98 0 1.758.46 3.47 1.333 4.983L2 22l5.208-1.367a9.94 9.94 0 0 0 4.852 1.247h.004c5.5 0 9.98-4.48 9.98-9.98 0-2.662-1.038-5.164-2.922-7.048A9.93 9.93 0 0 0 12.06 2.003zm0 18.267h-.003a8.28 8.28 0 0 1-4.204-1.146l-.303-.18-3.09.812.824-3.014-.197-.309a8.27 8.27 0 0 1-1.268-4.46c0-4.57 3.716-8.287 8.289-8.287a8.23 8.23 0 0 1 5.86 2.43 8.23 8.23 0 0 1 2.43 5.86c0 4.57-3.716 8.287-8.338 8.287z" />
-    </svg>
-  );
-}
-
-const handleAnchorClick = (e: React.MouseEvent<HTMLElement>, href: string) => {
-  if (href.startsWith("#")) {
-    e.preventDefault();
-    const element = document.getElementById(href.slice(1));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.pushState(null, "", href);
-    }
-  }
-};
-
 export function Footer() {
   return (
-    <footer className="border-t border-border-muted bg-surface-footer py-6">
+    <footer className="border-t border-border-muted bg-surface-footer py-16">
       <div className="mx-auto w-full max-w-[1200px] px-6">
-        <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2 mb-2">
-              <Image src={footerData.logo} alt={footerData.logoAlt} width={144} height={144} className="w-12 h-12" />
-              <h3 className="text-xl font-semibold text-text-primary">{footerData.brand.name.slice(0, 9)}<span className="text-brand-primary">{footerData.brand.name.slice(10)}</span></h3>
-            </div>
-            <p className="text-xs leading-relaxed text-text-secondary/50 italic">"{footerData.brand.description}"</p>
+            <h3 className="mb-4 text-xl font-semibold text-text-primary">{footerData.brand.name}</h3>
+            <p className="text-sm leading-relaxed text-text-secondary">{footerData.brand.description}</p>
           </div>
 
           <div>
@@ -69,7 +94,6 @@ export function Footer() {
                   <a
                     className="text-sm text-text-secondary transition-colors hover:text-brand-accent"
                     href={link.href}
-                    onClick={(e) => handleAnchorClick(e, link.href)}
                   >
                     {link.label}
                   </a>
@@ -79,19 +103,31 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold text-text-primary">{footerData.contactTitle}</h4>
+            <h4 className="mb-4 font-semibold text-text-primary">{footerData.socialTitle}</h4>
             <div className="flex gap-4">
-              {footerData.contactLinks.map((contact) => (
+              {footerData.socialLinks.map((social) => (
                 <a
-                  key={contact.name}
+                  key={social.name}
                   className="text-text-secondary transition-colors hover:text-brand-accent"
-                  href={contact.href}
+                  href={social.href}
                 >
-                  {contact.name === "email" && <IconMail />}
-                  {contact.name === "whatsapp" && <IconWhatsapp />}
+                  {social.name === "github" && <IconGithub />}
+                  {social.name === "twitter" && <IconTwitter />}
+                  {social.name === "instagram" && <IconInstagram />}
                 </a>
               ))}
             </div>
+          </div>
+
+          <div>
+            <h4 className="mb-4 font-semibold text-text-primary">{footerData.contactTitle}</h4>
+            <a
+              href={`mailto:${footerData.contact.email}`}
+              className="flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-brand-accent"
+            >
+              <IconMail />
+              {footerData.contact.email}
+            </a>
           </div>
         </div>
 

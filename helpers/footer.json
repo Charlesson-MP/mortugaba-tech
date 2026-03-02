@@ -1,6 +1,4 @@
 {
-  "logo": "/images/header/logo-mortugaba-tech.webp",
-  "logoAlt": "Logo da Mortugaba Tech",
   "brand": {
     "name": "Mortugaba Tech",
     "description": "Conectando pessoas e tecnologia para transformar Mortugaba através da inovação."
@@ -12,10 +10,15 @@
     { "label": "Membros", "href": "#membros" },
     { "label": "Participar", "href": "#participar" }
   ],
-  "contactTitle": "Contato",
-  "contactLinks": [
-    { "name": "email", "href": "#" },
-    { "name": "whatsapp", "href": "#" }
+  "socialTitle": "Redes Sociais",
+  "socialLinks": [
+    { "name": "github", "href": "#" },
+    { "name": "twitter", "href": "#" },
+    { "name": "instagram", "href": "#" }
   ],
+  "contactTitle": "Contato",
+  "contact": {
+    "email": "contato@mortugabatech.com"
+  },
   "copyright": "© 2026 Mortugaba Tech. Todos os direitos reservados."
 }
