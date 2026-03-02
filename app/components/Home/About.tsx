@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Button } from "@/app/components/Button";
+import { Button } from "@/app/components/ui/Button";
 import aboutData from "@/helpers/about.json";
 
 function getIcon(iconName: string) {
