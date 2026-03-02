@@ -13,8 +13,8 @@ export function Projects() {
   return (
     <section id="projetos" className="mx-auto w-full max-w-6xl px-4 py-16">
       <header className="mb-10">
-        <h2 className="text-left text-[24px] font-semibold text-text-primary md:text-[36px]">Projetos</h2>
-        <p className="mt-2 text-text-secondary text-sm">Projetos recentes</p>
+        <h2 className="mb-2 text-left text-[24px] font-semibold text-text-primary md:text-[36px]">Projetos</h2>
+        <p className="text-text-secondary text-sm">Projetos recentes</p>
       </header>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
