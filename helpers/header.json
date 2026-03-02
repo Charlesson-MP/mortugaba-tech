@@ -1,10 +1,24 @@
 {
   "brand": "Mortugaba Tech",
+  "brandLogo": "/images/header/logo-mortugaba-tech.webp",
+  "brandLogoAlt": "Logo da Mortugaba Tech",
   "links": [
-    { "label": "Sobre", "href": "#sobre" },
-    { "label": "Projetos", "href": "#projetos" },
-    { "label": "Membros", "href": "#membros" },
-    { "label": "Participar", "href": "#participar" }
+    {
+      "label": "Sobre",
+      "href": "#sobre"
+    },
+    {
+      "label": "Projetos",
+      "href": "#projetos"
+    },
+    {
+      "label": "Membros",
+      "href": "#membros"
+    },
+    {
+      "label": "Participar",
+      "href": "#participar"
+    }
   ],
   "cta": {
     "label": "Entrar na Comunidade",

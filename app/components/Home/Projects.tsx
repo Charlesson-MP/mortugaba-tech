@@ -1,48 +1,42 @@
-import Image from "next/image";
-import { Button } from "@/app/components/Button";
-import projectsData from "@/helpers/projects.json";
+"use client";
+
+import { Button } from "@/app/components/ui/Button";
+import ProjectCard, { Project } from "@/app/components/ui/ProjectCard";
+import ProjectModal from "@/app/components/ui/ProjectCardModal";
+import projects from "@/helpers/projects.json";
+import { useMemo, useState } from "react";
 
 export function Projects() {
+  const [selected, setSelected] = useState<Project | null>(null);
+
+  const visibleProjects = useMemo(() => projects.filter((p) => p.status === "published"), []);
+
   return (
-    <section id="projetos" className="bg-surface-base py-16">
-      <div className="mx-auto w-full max-w-[1200px] px-6">
-        <h2 className="mb-16 text-center text-[24px] font-semibold text-text-primary md:text-[36px]">
-          {projectsData.title}
+    <section id="projetos" className="mx-auto w-full max-w-6xl px-4 py-6">
+      <header className="mb-10">
+        <h2 className="mb-2 text-center text-[24px] font-semibold text-text-primary md:text-[36px]">
+          Projetos
         </h2>
-        <div className="grid gap-8 md:grid-cols-3">
-          {projectsData.items.map((project) => (
-            <article
-              key={project.title}
-              className="overflow-hidden rounded-xl bg-surface-alt transition-shadow hover:shadow-lg hover:shadow-black/20"
-            >
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="mb-3 text-xl font-semibold text-text-primary">{project.title}</h3>
-                <p className="mb-4 leading-relaxed text-text-secondary">{project.description}</p>
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-surface-base px-3 py-1 text-sm text-brand-accent"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <Button variant="text">{project.actionLabel} →</Button>
-              </div>
-            </article>
-          ))}
-        </div>
+        <p className="text-center text-text-secondary text-sm">Projetos recentes</p>
+      </header>
+
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {visibleProjects.map((project) => (
+          <ProjectCard key={project.id} project={project} onOpen={(p) => setSelected(p)} />
+        ))}
       </div>
+
+      <div className="mt-14 flex justify-center">
+        <Button
+          href="/projetos"
+          variant="rounded"
+          className="px-8 py-3 text-sm font-semibold tracking-wide shadow-lg shadow-brand-primary/10 transition-all hover:shadow-brand-primary/20"
+        >
+          Ver todos os projetos
+        </Button>
+      </div>
+
+      <ProjectModal open={!!selected} project={selected} onClose={() => setSelected(null)} />
     </section>
   );
 }
