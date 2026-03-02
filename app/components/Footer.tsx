@@ -50,7 +50,7 @@ const handleAnchorClick = (e: React.MouseEvent<HTMLElement>, href: string) => {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-muted bg-surface-footer py-6">
+    <footer className="mt-8 border-t border-border-muted bg-surface-footer py-6">
       <div className="mx-auto w-full max-w-[1200px] px-6">
         <div className="mb-12 grid grid-cols-1 gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
