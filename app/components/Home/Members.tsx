@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@/app/components/Button";
+import { Button } from "@/app/components/ui/Button";
 import membersData from "@/helpers/members.json";
 
 export function Members() {

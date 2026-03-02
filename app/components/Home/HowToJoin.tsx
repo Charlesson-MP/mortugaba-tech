@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Button } from "@/app/components/Button";
+import { Button } from "@/app/components/ui/Button";
 import howToJoinData from "@/helpers/how-to-join.json";
 
 export function HowToJoin() {

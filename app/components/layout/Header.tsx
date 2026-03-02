@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Button } from "@/app/components/Button";
+import { Button } from "@/app/components/ui/Button";
 import headerData from "@/helpers/header.json";
 import Image from "next/image";
 

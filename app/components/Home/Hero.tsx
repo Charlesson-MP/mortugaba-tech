@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/app/components/Button";
+import { Button } from "@/app/components/ui/Button";
 import heroData from "@/helpers/hero.json";
 
 export function Hero() {
