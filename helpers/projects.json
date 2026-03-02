@@ -1,26 +1,57 @@
-{
-  "title": "Projetos da Região",
-  "items": [
-    {
-      "title": "Portal da Transparência Municipal",
-      "description": "Plataforma web para facilitar o acesso dos cidadãos às informações públicas do município.",
-      "image": "https://images.unsplash.com/photo-1596496555041-9e0f141ca4b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "tags": ["React", "Node.js", "PostgreSQL"],
-      "actionLabel": "Ver detalhes"
+[
+  {
+    "id": "p1",
+    "slug": "mortugaba-tech-landing",
+    "title": "Mortugaba Tech Landing",
+    "authors": [
+      {
+        "name": "Charles Silva Pereira",
+        "role": "Frontend"
+      },
+      {
+        "name": "Ana Souza",
+        "role": "UI/UX",
+        "url": "https://linkedin.com"
+      },
+      {
+        "name": "João Lima",
+        "role": "Conteúdo"
+      },
+      {
+        "name": "Cleber Ferreira",
+        "role": "Infraestrutura"
+      }
+    ],
+    "shortDescription": "Site institucional destacando a missão, membros e projetos em destaque.",
+    "description": "Uma landing page em Next.js + Tailwind focada em performance, acessibilidade e uma identidade visual limpa.\n\nInclui seções modulares, componentes de UI reutilizáveis e uma estrutura escalável para futura integração com backend.",
+    "coverImage": {
+      "src": "/images/projects/preview-project1.webp",
+      "alt": "Capa do projeto"
     },
-    {
-      "title": "App de Agricultura Digital",
-      "description": "Sistema de monitoramento para pequenos agricultores da região gerenciarem suas produções.",
-      "image": "https://images.unsplash.com/photo-1643290274113-1ff22efe2ce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "tags": ["Mobile", "IoT", "Firebase"],
-      "actionLabel": "Ver detalhes"
+    "stack": ["Next.js", "Tailwind", "TypeScript"],
+    "tags": ["Frontend", "Landing Page"],
+    "repoUrl": "https://github.com/your-org/your-repo",
+    "liveUrl": "https://your-site.com",
+    "status": "published"
+  },
+  {
+    "id": "p2",
+    "slug": "internal-tooling",
+    "title": "Ferramentas Internas",
+    "authors": [
+      {
+        "name": "Comunidade",
+        "role": "Mantenedores"
+      }
+    ],
+    "shortDescription": "Utilitários para acelerar fluxos de trabalho internos e padronizar padrões de UI.",
+    "description": "Coleção de pequenas ferramentas e utilitários de UI projetados para melhorar a produtividade e consistência.\n\nRecursos planejados: templates, geradores e componentes compartilhados.",
+    "coverImage": {
+      "src": "/images/projects/preview-project2.webp",
+      "alt": "Capa do projeto"
     },
-    {
-      "title": "Sistema de Gestão Escolar",
-      "description": "Ferramenta para digitalizar processos administrativos das escolas locais.",
-      "image": "https://images.unsplash.com/photo-1627634771121-fa3db5779f60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "tags": ["Vue.js", "Python", "MySQL"],
-      "actionLabel": "Ver detalhes"
-    }
-  ]
-}
+    "stack": ["Next.js", "Tailwind"],
+    "tags": ["Ferramentas"],
+    "status": "published"
+  }
+]
