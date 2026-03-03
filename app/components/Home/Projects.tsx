@@ -28,7 +28,7 @@ export function Projects() {
 
       <div className="mt-14 flex justify-center">
         <Button
-          href="/projects"
+          href="/projetos"
           variant="rounded"
           className="px-8 py-3 text-sm font-semibold tracking-wide shadow-lg shadow-brand-primary/10 transition-all hover:shadow-brand-primary/20"
         >
