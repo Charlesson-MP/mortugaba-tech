@@ -4,38 +4,32 @@ import { Footer } from "@/app/components/layout/Footer";
 import ProjectCard, { Project } from "@/app/components/ui/ProjectCard";
 import ProjectModal from "@/app/components/ui/ProjectCardModal";
 import projects from "@/helpers/projects.json";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-const STACK_OPTIONS = [
-  "Next.js",
-  "React",
-  "Vue.js",
-  "Angular",
-  "Node.js",
-  "Express",
-  "NestJS",
-  "TypeScript",
-  "JavaScript",
-  "Tailwind",
-  "Python",
-  "Django",
-  "Flask",
-  "Java",
-  "Spring Boot",
-  "PHP",
-  "Laravel",
-  "Ruby",
-  "Rails",
-  "Go",
-  "Rust",
-  "Docker",
-  "PostgreSQL",
-  "MongoDB",
-  "MySQL",
-  "Firebase",
-  "AWS",
-  "Figma",
-];
+const STACK_CATEGORIES = {
+  Frontend: ["Next.js", "React", "Vue.js", "Angular", "Tailwind", "TypeScript", "JavaScript"],
+  Backend: [
+    "Node.js",
+    "Express",
+    "NestJS",
+    "Python",
+    "Django",
+    "Flask",
+    "Java",
+    "Spring Boot",
+    "PHP",
+    "Laravel",
+    "Ruby",
+    "Rails",
+    "Go",
+    "Rust",
+  ],
+  Database: ["PostgreSQL", "MongoDB", "MySQL", "Firebase"],
+  "Infra & DevOps": ["Docker", "AWS"],
+  Design: ["Figma"],
+};
+
+const ALL_STACK_OPTIONS = Object.values(STACK_CATEGORIES).flat();
 
 function IconSearch() {
   return (
@@ -61,6 +55,18 @@ export default function ProjectsPage() {
   const [search, setSearch] = useState("");
   const [selectedStacks, setSelectedStacks] = useState<string[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const filterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (filterRef.current && !filterRef.current.contains(event.target as Node)) {
+        setIsFilterOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   function toggleStack(stack: string) {
     setSelectedStacks((prev) =>
@@ -99,56 +105,174 @@ export default function ProjectsPage() {
         </header>
 
         {/* Search & Filter Bar */}
-        <div className="mb-10 space-y-6">
-          {/* Search Input */}
-          <div className="relative mx-auto w-full max-w-xl">
-            <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center">
-              <IconSearch />
+        <div className="mb-10">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center">
+            {/* Search Input */}
+            <div className="relative flex-1">
+              <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center">
+                <IconSearch />
+              </div>
+              <input
+                id="search-projects"
+                type="text"
+                placeholder="Buscar por nome ou descrição..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full rounded-xl border border-border-muted bg-surface-alt py-3 pl-12 pr-4 text-sm text-text-primary placeholder:text-text-secondary/60 outline-none transition focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/30"
+              />
             </div>
-            <input
-              id="search-projects"
-              type="text"
-              placeholder="Buscar projetos..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-xl border border-border-muted bg-surface-alt py-3 pl-12 pr-4 text-sm text-text-primary placeholder:text-text-secondary/60 outline-none transition focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/30"
-            />
+
+            {/* Filter Dropdown */}
+            <div className="relative" ref={filterRef}>
+              <button
+                type="button"
+                onClick={() => setIsFilterOpen(!isFilterOpen)}
+                className={`flex h-full w-full items-center justify-between gap-3 rounded-xl border px-5 py-3 text-sm font-medium transition md:w-auto ${
+                  isFilterOpen || selectedStacks.length > 0
+                    ? "border-brand-primary bg-brand-primary/5 text-brand-primary"
+                    : "border-border-muted bg-surface-alt text-text-secondary hover:border-brand-primary/40 hover:text-text-primary"
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                  </svg>
+                  <span>Filtrar</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  {selectedStacks.length > 0 && (
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-primary text-[10px] text-white">
+                      {selectedStacks.length}
+                    </span>
+                  )}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`transition-transform duration-200 ${isFilterOpen ? "rotate-180" : ""}`}
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </div>
+              </button>
+
+              {/* Dropdown Panel */}
+              {isFilterOpen && (
+                <div className="absolute right-0 top-full z-30 mt-2 w-full min-w-[320px] max-w-[90vw] overflow-hidden rounded-2xl border border-border-muted bg-surface-alt shadow-2xl shadow-black/50 md:w-[480px]">
+                  <div className="max-h-[70vh] overflow-y-auto p-5">
+                    <div className="grid gap-6 sm:grid-cols-2">
+                      {Object.entries(STACK_CATEGORIES).map(([category, stacks]) => (
+                        <div key={category} className="space-y-3">
+                          <h4 className="text-[10px] font-bold uppercase tracking-wider text-text-secondary/70">
+                            {category}
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {stacks.map((stack) => {
+                              const isActive = selectedStacks.includes(stack);
+                              return (
+                                <button
+                                  key={stack}
+                                  type="button"
+                                  onClick={() => toggleStack(stack)}
+                                  className={`rounded-lg border px-2.5 py-1.5 text-xs font-medium transition ${
+                                    isActive
+                                      ? "border-brand-primary bg-brand-primary text-white"
+                                      : "border-border-muted bg-surface-base text-text-secondary hover:border-brand-primary/40 hover:text-text-primary"
+                                  }`}
+                                >
+                                  {stack}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-center border-t border-border-muted bg-surface-base/50 p-4">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedStacks([]);
+                        setIsFilterOpen(false);
+                      }}
+                      className="text-xs font-medium text-text-secondary transition-colors hover:text-brand-accent"
+                    >
+                      Limpar todos os filtros
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
-          {/* Stack Filter Chips */}
-          <div className="mx-auto max-w-4xl">
-            <p className="mb-3 text-center text-xs font-semibold uppercase tracking-wider text-text-secondary">
-              Filtrar por tecnologia
-            </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              {selectedStacks.length > 0 && (
+          {/* Active Filter Tags */}
+          {selectedStacks.length > 0 && (
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-text-secondary">
+                Ativos:
+              </span>
+              {selectedStacks.map((stack) => (
                 <button
-                  type="button"
-                  onClick={() => setSelectedStacks([])}
-                  className="rounded-full border border-brand-accent/40 bg-brand-accent/10 px-3 py-1.5 text-xs font-medium text-brand-accent transition hover:bg-brand-accent/20"
+                  key={stack}
+                  onClick={() => toggleStack(stack)}
+                  className="flex items-center gap-1.5 rounded-full border border-brand-primary/30 bg-brand-primary/10 px-3 py-1 text-xs font-medium text-brand-primary transition hover:bg-brand-primary/20"
                 >
-                  ✕ Limpar filtros
-                </button>
-              )}
-              {STACK_OPTIONS.map((stack) => {
-                const isActive = selectedStacks.includes(stack);
-                return (
-                  <button
-                    key={stack}
-                    type="button"
-                    onClick={() => toggleStack(stack)}
-                    className={`rounded-full border px-3 py-1.5 text-xs font-medium transition ${
-                      isActive
-                        ? "border-brand-primary bg-brand-primary/20 text-brand-primary-hover shadow-sm shadow-brand-primary/10"
-                        : "border-border-muted bg-surface-alt text-text-secondary hover:border-brand-primary/40 hover:text-text-primary"
-                    }`}
+                  {stack}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    {stack}
-                  </button>
-                );
-              })}
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                </button>
+              ))}
+              <button
+                onClick={() => setSelectedStacks([])}
+                className="ml-1 flex items-center gap-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/5 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand-accent transition hover:bg-brand-accent/15"
+              >
+                Limpar todos
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Projects Grid */}
