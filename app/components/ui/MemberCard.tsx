@@ -32,7 +32,7 @@ export default function MemberCard({ member, onOpen }: Props) {
         <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-brand-accent/40 bg-surface-base transition-all duration-300 group-hover:border-brand-accent">
           <Image
             src={member.avatarUrl}
-            alt={member.name}
+            alt={`Foto de perfil de ${member.name}`}
             fill
             className="object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0"
             sizes="128px"
