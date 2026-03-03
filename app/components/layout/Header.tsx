@@ -1,15 +1,12 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Button } from "@/app/components/ui/Button";
 import headerData from "@/helpers/header.json";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter();
 
   function handleToggleMenu() {
     setIsMenuOpen((prev) => !prev);
@@ -38,10 +35,6 @@ export function Header() {
   const handleAnchorClick = (e: React.MouseEvent<HTMLElement>, href: string) => {
     if (href.startsWith("#")) {
       e.preventDefault();
-      if (pathname !== "/") {
-        router.push("/" + href);
-        return;
-      }
       const element = document.getElementById(href.slice(1));
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -54,18 +47,11 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border-muted bg-surface-base">
       <div className="mx-auto flex h-[72px] w-full max-w-[1200px] items-center justify-between px-6">
         <div className="flex items-center gap-2 text-xl font-semibold text-text-primary">
-          <Image
-            src={headerData.brandLogo}
-            alt={headerData.brandLogoAlt}
-            width={144}
+          <Image src={headerData.brandLogo} alt={headerData.brandLogoAlt} width={144}
             height={144}
             className="h-14 w-auto"
-            priority
-          />
-          <a href="/">
-            {headerData.brand.slice(0, 9)}
-            <span className="text-brand-primary">{headerData.brand.slice(10, 14)}</span>
-          </a>
+            priority />
+          <a href="">{headerData.brand.slice(0, 9)}<span className="text-brand-primary">{headerData.brand.slice(10, 14)}</span></a>
         </div>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -81,11 +67,7 @@ export function Header() {
           ))}
         </nav>
 
-        <Button
-          href={headerData.cta.href}
-          className="hidden px-6 py-2.5 lg:block"
-          onClick={(e) => handleAnchorClick(e, headerData.cta.href)}
-        >
+        <Button href={headerData.cta.href} className="hidden px-6 py-2.5 lg:block" onClick={(e) => handleAnchorClick(e, headerData.cta.href)}>
           {headerData.cta.label}
         </Button>
 
@@ -126,9 +108,8 @@ export function Header() {
 
       {/* Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/40 transition-opacity md:hidden ${
-          isMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
-        }`}
+        className={`fixed inset-0 z-40 bg-black/40 transition-opacity md:hidden ${isMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
+          }`}
         onClick={handleCloseMenu}
       />
 
