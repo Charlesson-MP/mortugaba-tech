@@ -74,7 +74,7 @@ export default function MemberModal({ open, member, onClose }: Props) {
                 <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-brand-accent/20 bg-surface-alt shadow-inner">
                   <Image
                     src={member.avatarUrl}
-                    alt={member.name}
+                    alt={`Foto de perfil de ${member.name}`}
                     fill
                     className="object-cover"
                     sizes="192px"
