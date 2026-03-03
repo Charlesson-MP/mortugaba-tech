@@ -6,12 +6,24 @@
       "name": "Charlesson",
       "role": "Front-end Developer",
       "avatarUrl": "/images/members/member1.webp",
-      "bio": "Desenvolvedor Full-Stack especializado em Next.js, React, TypeScript e Tailwind CSS, com foco em arquitetura escalável e organização de componentes reutilizáveis. Experiência na estruturação de projetos preparados para integração com banco de dados e APIs, mantendo alta performance e padronização de código. Possuo forte domínio de modelagem de dados, separação de responsabilidades e boas práticas de versionamento, sempre buscando entregar aplicações robustas, bem documentadas e orientadas à evolução contínua.",
+      "bio": "Desenvolvedor front-end especializado em Next.js, React, TypeScript e Tailwind CSS, com foco em arquitetura escalável e organização de componentes reutilizáveis. Experiência na estruturação de projetos preparados para integração com banco de dados e APIs, mantendo alta performance e padronização de código. Possuo forte domínio de modelagem de dados, separação de responsabilidades e boas práticas de versionamento, sempre buscando entregar aplicações robustas, bem documentadas e orientadas à evolução contínua.",
       "links": {
         "github": "https://github.com/charlesson-MP",
         "linkedin": "https://linkedin.com/in/charlesson-MP"
       },
       "memberType": "member"
+    },
+    {
+      "id": "m2",
+      "name": "Marcelo",
+      "role": "Front-end Developer",
+      "avatarUrl": "/images/members/member2.webp",
+      "bio": "Um rapaz bacana e elegante, que gosta de altas aventuras. Principalmente quando o assunto é travestis e mulheres trans. Gosta de altas baladas, encher a cara e cair na putaria. Quem quiser se aventurar, se divertir e dar umas boas risadas, é só chamar.",
+      "links": {
+        "github": "https://github.com/marcelossilvaa",
+        "linkedin": "https://www.linkedin.com/in/marcelossilva1/"
+      },
+      "memberType": "founder"
     }
   ]
 }
