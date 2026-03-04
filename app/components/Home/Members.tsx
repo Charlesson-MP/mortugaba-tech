@@ -19,7 +19,7 @@ export function Members() {
           Conheça alguns membros da comunidade Mortugaba Tech.
         </p>
 
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
           {membersData.items.map((member) => (
             <MemberCard key={member.id} member={member as Member} onOpen={(m) => setSelected(m)} />
           ))}

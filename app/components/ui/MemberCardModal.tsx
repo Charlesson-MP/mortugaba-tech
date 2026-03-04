@@ -47,21 +47,21 @@ export default function MemberModal({ open, member, onClose }: Props) {
         className="relative flex w-full max-w-3xl h-[85vh] md:h-[700px] flex-col overflow-hidden rounded-2xl border border-border-muted bg-surface-base shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
+        <button
+          type="button"
+          onClick={onClose}
+          className="absolute right-3 top-3 z-20 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-border-muted bg-surface-base text-lg font-semibold leading-none text-text-primary shadow-sm transition hover:bg-black/5"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+
         {/* Header - Sticky */}
-        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-border-muted/30 bg-surface-base p-6 pb-4">
+        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-border-muted/30 bg-surface-base p-6 pb-4 pr-16">
           <div className="min-w-0">
             <h3 className="truncate text-xl font-semibold text-text-primary">{member.name}</h3>
             <p className="mt-1 text-sm text-text-secondary">{member.role}</p>
           </div>
-
-          <button
-            type="button"
-            onClick={onClose}
-            className="cursor-pointer rounded-lg px-3 py-2 text-text-secondary transition hover:bg-black/5 hover:text-text-primary"
-            aria-label="Fechar"
-          >
-            ✕
-          </button>
         </div>
 
         {/* Scrollable Content */}
