@@ -18,6 +18,6 @@ jobs:
       - name: Deploy
         shell: bash
         run: |
-          cd /opt/stacks/community/front
+          cd /opt/stacks/community/front-main
           docker compose up -d
           docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
