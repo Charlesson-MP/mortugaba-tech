@@ -16,7 +16,7 @@ export function Members() {
           {membersData.title}
         </h2>
         <p className="mb-10 text-sm text-text-secondary/60">
-          Conheça os membros fundadores da comunidade.
+          Conheça alguns membros da comunidade Mortugaba Tech.
         </p>
 
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

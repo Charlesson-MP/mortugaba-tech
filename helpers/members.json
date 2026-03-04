@@ -1,29 +1,531 @@
 {
-  "title": "Membros da Comunidade",
-  "items": [
-    {
-      "id": "m1",
-      "name": "Charlesson",
-      "role": "Front-end Developer",
-      "avatarUrl": "/images/members/member1.webp",
-      "bio": "Desenvolvedor front-end especializado em Next.js, React, TypeScript e Tailwind CSS, com foco em arquitetura escalável e organização de componentes reutilizáveis. Experiência na estruturação de projetos preparados para integração com banco de dados e APIs, mantendo alta performance e padronização de código. Possuo forte domínio de modelagem de dados, separação de responsabilidades e boas práticas de versionamento, sempre buscando entregar aplicações robustas, bem documentadas e orientadas à evolução contínua.",
-      "links": {
-        "github": "https://github.com/charlesson-MP",
-        "linkedin": "https://linkedin.com/in/charlesson-MP"
-      },
-      "memberType": "member"
-    },
-    {
-      "id": "m2",
-      "name": "Marcelo",
-      "role": "Front-end Developer",
-      "avatarUrl": "/images/members/member2.webp",
-      "bio": "Um rapaz bacana e elegante, que gosta de altas aventuras. Principalmente quando o assunto é travestis e mulheres trans. Gosta de altas baladas, encher a cara e cair na putaria. Quem quiser se aventurar, se divertir e dar umas boas risadas, é só chamar.",
-      "links": {
-        "github": "https://github.com/marcelossilvaa",
-        "linkedin": "https://www.linkedin.com/in/marcelossilva1/"
-      },
-      "memberType": "founder"
-    }
-  ]
+    "title": "Membros da Comunidade",
+    "items": [
+        {
+            "id": "m1",
+            "name": "Charlesson Pereira",
+            "role": "Desenvolvedor Front-end Júnior",
+            "avatarUrl": "/images/members/member1.webp",
+            "bio": "Desenvolvedor front-end júnior com foco em interfaces web responsivas usando JavaScript, React e HTML/CSS.",
+            "currentPosition": "Desenvolvedor Front-end Júnior",
+            "location": "Vitória da Conquista, BA",
+            "professionalHistory": [
+                {
+                    "role": "Desenvolvedor Front-end Júnior",
+                    "company": "Projetos acadêmicos e pessoais",
+                    "period": "2024 - atual",
+                    "summary": "Criação de interfaces web com React, JavaScript e HTML/CSS, com foco em usabilidade e responsividade."
+                }
+            ],
+            "skills": [
+                "React",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "Git"
+            ],
+            "education": [
+                {
+                    "institution": "Universidade Estadual do Sudoeste da Bahia",
+                    "degree": "Bacharelado em Computação",
+                    "period": "jan 2017 - ago 2028"
+                }
+            ],
+            "links": {
+                "github": "https://github.com/charlesson-MP",
+                "linkedin": "https://www.linkedin.com/in/charlesson-MP/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m2",
+            "name": "Marcelo Santana Silva",
+            "role": "Desenvolvedor Front-end",
+            "avatarUrl": "/images/members/member2.webp",
+            "bio": "Desenvolvedor front-end com experiência em e-commerce e aplicações web/mobile, atuando com JavaScript, TypeScript, React e ecossistema Shopify.",
+            "currentPosition": "Desenvolvedor Front-end Pleno",
+            "location": "Vitória da Conquista, BA",
+            "professionalHistory": [
+                {
+                    "role": "Desenvolvedor Front-end Pleno",
+                    "company": "WEBJUMP",
+                    "period": "set 2025 - atual",
+                    "summary": "Atuação em e-commerces com personalizações em JavaScript/CSS e integrações Adobe Target/Analytics."
+                },
+                {
+                    "role": "Desenvolvedor Front-end Pleno",
+                    "company": "Vasta",
+                    "period": "mai 2025 - set 2025",
+                    "summary": "Desenvolvimento Shopify (Liquid), aplicações mobile com Capacitor e interfaces em React/Tailwind."
+                },
+                {
+                    "role": "Desenvolvedor Front-end Júnior",
+                    "company": "Vasta",
+                    "period": "mai 2024 - mai 2025",
+                    "summary": "Construção de aplicações front-end e projetos headless Shopify com React."
+                }
+            ],
+            "skills": [
+                "JavaScript",
+                "TypeScript",
+                "React",
+                "Next.js",
+                "Node.js",
+                "Shopify",
+                "Liquid",
+                "Tailwind CSS",
+                "Capacitor"
+            ],
+            "education": [
+                {
+                    "institution": "Uniamérica",
+                    "degree": "Bacharelado em Computer Science",
+                    "period": "jun 2021 - mar 2025"
+                }
+            ],
+            "links": {
+                "github": "https://github.com/marcelossilvaa",
+                "linkedin": "https://www.linkedin.com/in/marcelossilva1/"
+            },
+            "memberType": "founder"
+        },
+        {
+            "id": "m3",
+            "name": "Danillo Hadler",
+            "role": "Product Designer (UX)",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/D5603AQGuqfAPl-8QHw/profile-displayphoto-shrink_800_800/B56Zc7aj.XGsAg-/0/1749048510290?e=1774483200&v=beta&t=Qbt7aZ9yfFQK8dMQmFCLo5ZJqRopuf7R0Kcb6SC4EyY",
+            "bio": "Product Designer com atuação em produtos digitais de alta escala, cobrindo discovery, definição de problemas e validação de soluções.",
+            "currentPosition": "UX Designer na Globo",
+            "location": "São Paulo, SP",
+            "professionalHistory": [
+                {
+                    "role": "UX Designer",
+                    "company": "Globo",
+                    "period": "fev 2023 - atual",
+                    "summary": "Design de produtos e interfaces com foco em experiência do usuário e acompanhamento de métricas."
+                }
+            ],
+            "skills": [
+                "UX Design",
+                "Product Design",
+                "Design de interface",
+                "Discovery",
+                "Figma"
+            ],
+            "education": [
+                {
+                    "institution": "Centro Universitário FMU | FIAM-FAAM",
+                    "degree": "Bacharelado em Ciências Contábeis",
+                    "period": "2018 - 2022"
+                },
+                {
+                    "institution": "Tera",
+                    "degree": "Formação em UX Design",
+                    "period": "Curso complementar"
+                }
+            ],
+            "links": {
+                "linkedin": "https://www.linkedin.com/in/danillo-hadler-2b7230160/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m4",
+            "name": "Anthony Correia",
+            "role": "Security Analyst",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFjLeQ0m_LuFQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729702187201?e=1774483200&v=beta&t=2WnJF5gQLLA_n4XEjlBwhRUXEIScumqLBmvk6AddLoU",
+            "bio": "Profissional de cibersegurança com foco em threat intelligence, monitoramento de eventos e operações SOC em ambientes cloud.",
+            "currentPosition": "Threat Intelligence Analyst",
+            "location": "Rio de Janeiro, RJ",
+            "professionalHistory": [
+                {
+                    "role": "Threat Intelligence Analyst",
+                    "company": "Solor",
+                    "period": "jan 2025 - atual",
+                    "summary": "Monitoramento de IoCs e análise de ameaças, com foco em inteligência e resposta a incidentes."
+                },
+                {
+                    "role": "Analista de Segurança",
+                    "company": "Solor",
+                    "period": "mar 2024 - jan 2025",
+                    "summary": "Análise de logs, correlação de eventos e implementação de controles de segurança."
+                },
+                {
+                    "role": "Analista de Segurança",
+                    "company": "FitBank",
+                    "period": "out 2022 - dez 2023",
+                    "summary": "Gestão de ambiente AWS e observabilidade com Elastic Stack e ferramentas de segurança."
+                }
+            ],
+            "skills": [
+                "Threat Intelligence",
+                "SOC",
+                "AWS",
+                "Security+",
+                "Elastic Security",
+                "Zabbix",
+                "SIEM"
+            ],
+            "education": [
+                {
+                    "institution": "Universidade Federal do Ceará",
+                    "degree": "Formação em Ciência da Computação",
+                    "period": "não informado"
+                }
+            ],
+            "links": {
+                "linkedin": "https://www.linkedin.com/in/anthony-correia/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m5",
+            "name": "Paulo H. Sousa",
+            "role": "Desenvolvedor Back-end",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQGkwKbF2i8MyA/profile-displayphoto-crop_800_800/B4DZhzM7htHYAM-/0/1754279427387?e=1774483200&v=beta&t=n0zoP2CGLhrhtEFFw3Ih53Us4EhBxaChw5VGcrRwxh0",
+            "bio": "Desenvolvedor back-end com experiência em Java/Kotlin e APIs REST, atuando em sistemas full stack com foco em performance e arquitetura.",
+            "currentPosition": "Desenvolvedor de Software",
+            "location": "Bahia, Brasil",
+            "professionalHistory": [
+                {
+                    "role": "Desenvolvedor de Software",
+                    "company": "AF Tecnologia",
+                    "period": "mai 2023 - atual",
+                    "summary": "Manutenção e evolução de sistemas com Java, Spring Boot e Kotlin para operações em larga escala."
+                },
+                {
+                    "role": "Monitor de Desenvolvimento Web",
+                    "company": "PUC Minas",
+                    "period": "set 2025 - dez 2025",
+                    "summary": "Apoio técnico e revisão de bugs para aplicações web."
+                },
+                {
+                    "role": "Desenvolvedor FullStack",
+                    "company": "Solidarize",
+                    "period": "jan 2025 - jul 2025",
+                    "summary": "Backend em Node.js com MongoDB, autenticação e notificações."
+                }
+            ],
+            "skills": [
+                "Java",
+                "Kotlin",
+                "Spring Boot",
+                "APIs REST",
+                "Node.js",
+                "MongoDB",
+                "SQL Server"
+            ],
+            "education": [
+                {
+                    "institution": "PUC Minas",
+                    "degree": "CST em Análise e Desenvolvimento de Sistemas",
+                    "period": "jan 2024 - jul 2026"
+                }
+            ],
+            "links": {
+                "linkedin": "https://www.linkedin.com/in/paullo-h-sousa/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m6",
+            "name": "Joedson Barbosa",
+            "role": "Front-end Web Developer",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/C4D03AQHEdxhgh_Re9A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1654455669060?e=1774483200&v=beta&t=ewiYQLqhVKKMhl2tp5VG7OoP0uEkcRb_TtXwe2Cj0Sk",
+            "bio": "Desenvolvedor front-end especializado em Shopify, com experiência em customizações, integrações e liderança técnica.",
+            "currentPosition": "Technical Lead",
+            "location": "Vitória da Conquista, BA",
+            "professionalHistory": [
+                {
+                    "role": "Technical Lead",
+                    "company": "DASH Otimiza",
+                    "period": "nov 2025 - atual",
+                    "summary": "Liderança técnica em projetos Shopify, direcionando soluções e evolução do time."
+                },
+                {
+                    "role": "Junior Developer",
+                    "company": "Compass.uol",
+                    "period": "nov 2024 - ago 2025",
+                    "summary": "Atuação em templates Liquid, JavaScript e integrações com APIs da Shopify."
+                },
+                {
+                    "role": "Web Developer",
+                    "company": "Vasta",
+                    "period": "jan 2022 - mai 2024",
+                    "summary": "Construção e manutenção de lojas com HTML, CSS, JavaScript e temas customizados."
+                }
+            ],
+            "skills": [
+                "Shopify",
+                "Liquid",
+                "JavaScript",
+                "React",
+                "Angular",
+                "HTML",
+                "CSS"
+            ],
+            "education": [
+                {
+                    "institution": "Faculdade Independente do Nordeste (FAINOR)",
+                    "degree": "Engenharia da Computação",
+                    "period": "fev 2014 - nov 2021"
+                }
+            ],
+            "links": {
+                "linkedin": "https://www.linkedin.com/in/joedson-barbosa/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m7",
+            "name": "João Pedro",
+            "role": "Engenheiro de Software Pleno",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQF3UULB75N-fw/profile-displayphoto-crop_800_800/B4DZsYot5eHQAI-/0/1765644886979?e=1774483200&v=beta&t=DcObagUqL4Fpb7y1-2uNcK3yitCbqdWYnhymZa7gc9k",
+            "bio": "Engenheiro de software full stack com foco em backend escalável usando Node.js/NestJS e integração com SQL, AWS e Docker.",
+            "currentPosition": "Engenheiro de Software Pleno",
+            "location": "São Paulo, SP",
+            "professionalHistory": [
+                {
+                    "role": "Engenheiro de Software Pleno",
+                    "company": "Sintetiza AI",
+                    "period": "fev 2026 - atual",
+                    "summary": "Desenvolvimento de serviços backend escaláveis em TypeScript e infraestrutura cloud."
+                },
+                {
+                    "role": "Engenheiro de Software",
+                    "company": "AmorSaúde Brasil",
+                    "period": "set 2024 - fev 2026",
+                    "summary": "Sistema financeiro e integrações, backend e manutenção de plataforma."
+                },
+                {
+                    "role": "Assistente de Dados",
+                    "company": "Metainfo",
+                    "period": "set 2024 - atual",
+                    "summary": "Automação de processos e tratamento de dados com Python e SQL."
+                }
+            ],
+            "skills": [
+                "TypeScript",
+                "Node.js",
+                "NestJS",
+                "Angular",
+                "AWS",
+                "Docker",
+                "SQL",
+                "Redis"
+            ],
+            "education": [
+                {
+                    "institution": "Descomplica Faculdade Digital",
+                    "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+                    "period": "jan 2024 - mar 2026"
+                }
+            ],
+            "links": {
+                "linkedin": "https://www.linkedin.com/in/joao-pedro-pereira-/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m8",
+            "name": "Aldo Felipe",
+            "role": "Electronic Engineer | Firmware Developer",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQFCpKGiJ74H0Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1668987177431?e=1774483200&v=beta&t=PO3Z7m5ClX4BiMtfXAVwT1nqQhVPpM1IFbRWYLQgbMI",
+            "bio": "Engenheiro eletrônico com experiência em firmware, computer vision, machine learning e IoT. Atuou em coordenação de projetos e desenvolvimento embarcado.",
+            "currentPosition": "Coordenador de Projeto",
+            "location": "Gama, Distrito Federal",
+            "professionalHistory": [
+                {
+                    "role": "Coordenador de Projeto",
+                    "company": "Smart Sensing Brasil",
+                    "period": "mar 2025 - atual",
+                    "summary": "Coordenação de projetos de engenharia eletrônica e soluções IoT."
+                },
+                {
+                    "role": "Desenvolvedor de Firmware",
+                    "company": "Smart Sensing Brasil",
+                    "period": "jun 2024 - mar 2025",
+                    "summary": "Desenvolvimento de firmware para dispositivos embarcados com foco em sensoriamento."
+                },
+                {
+                    "role": "Assistente de Pré-vendas",
+                    "company": "Arcade Tecnologia",
+                    "period": "jan 2024 - jun 2024",
+                    "summary": "Suporte técnico em pré-vendas de soluções de tecnologia."
+                }
+            ],
+            "skills": [
+                "Firmware",
+                "Computer Vision",
+                "Machine Learning",
+                "IoT",
+                "Engenharia Eletrônica",
+                "Python",
+                "C/C++"
+            ],
+            "education": [
+                {
+                    "institution": "Universidade de Brasília",
+                    "degree": "Engenharia Eletrônica",
+                    "period": "2017 - 2024"
+                }
+            ],
+            "links": {
+                "linkedin": "https://www.linkedin.com/in/aldobsilva/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m9",
+            "name": "Francisco Lima",
+            "role": "Desenvolvedor Back-end Junior",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/D4E35AQFhjXEHLbQMAw/profile-framedphoto-shrink_800_800/B4EZZY34sFHYAw-/0/1745247767909?e=1773244800&v=beta&t=G5A__N3A8K9KCZQhdD6t2LxX3rQxboK6Quw1CkQxR4c",
+            "bio": "Desenvolvedor back-end com foco em Java e Spring Boot, experiência em APIs REST com Django e residência em software no CEPEDI.",
+            "currentPosition": "Residente de Software - Back-End",
+            "location": "Vitória da Conquista, BA",
+            "professionalHistory": [
+                {
+                    "role": "Residente de Software - Back-End Fase 2",
+                    "company": "CEPEDI",
+                    "period": "jan 2025 - atual",
+                    "summary": "Desenvolvimento back-end com POO, Kanban e boas práticas de engenharia."
+                },
+                {
+                    "role": "Residente em Software",
+                    "company": "CEPEDI",
+                    "period": "jun 2024 - jan 2025",
+                    "summary": "APIs REST com Django Rest Framework e programação orientada a objetos."
+                },
+                {
+                    "role": "Especialista em Suporte de TI",
+                    "company": "Universidade Paulista (Estágio)",
+                    "period": "jul 2022 - jan 2023",
+                    "summary": "Suporte a sistemas, manutenção de laboratório e atendimento técnico."
+                }
+            ],
+            "skills": [
+                "Java",
+                "Spring Boot",
+                "Docker",
+                "Hibernate",
+                "Django",
+                "Python",
+                "POO",
+                "APIs REST"
+            ],
+            "education": [
+                {
+                    "institution": "Universidade Estadual do Sudoeste da Bahia",
+                    "degree": "Bacharelado - Engenharia da Computação",
+                    "period": "não informado"
+                }
+            ],
+            "links": {
+                "github": "https://github.com/LimaFrancisco",
+                "linkedin": "https://www.linkedin.com/in/francisco-lima-4280901b0/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m10",
+            "name": "Thalison Botelho",
+            "role": "Tech Leader | Shopify Developer",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQGiAavhiQ7SjQ/profile-displayphoto-crop_800_800/B4DZkqznN0JYAM-/0/1757359798857?e=1774483200&v=beta&t=yrudwIgWoRK8X2NG-cHIA6d4dibEGYX88ehwMftU_YA",
+            "bio": "Engenheiro da Computação e Tech Leader com ampla experiência em Shopify, gestão de projetos e desenvolvimento web de alta performance.",
+            "currentPosition": "Tech Lead na Agência Disco",
+            "location": "Vitória da Conquista, BA",
+            "professionalHistory": [
+                {
+                    "role": "Tech Lead",
+                    "company": "Agência Disco",
+                    "period": "jun 2025 - atual",
+                    "summary": "Liderança técnica em projetos Shopify com foco em arquitetura de soluções."
+                },
+                {
+                    "role": "Gerente de Desenvolvimento Web",
+                    "company": "Vasta",
+                    "period": "out 2023 - mar 2025",
+                    "summary": "Gestão de projetos e equipe, garantindo entregas dentro dos requisitos e prazos."
+                },
+                {
+                    "role": "Desenvolvedor Web",
+                    "company": "Vasta",
+                    "period": "nov 2022 - out 2023",
+                    "summary": "Desenvolvimento e manutenção de lojas Shopify com foco em performance e UX."
+                }
+            ],
+            "skills": [
+                "Shopify",
+                "Liquid",
+                "JavaScript",
+                "TypeScript",
+                "Gestão de Projetos",
+                "Arquitetura de Soluções",
+                "Web Design Responsivo"
+            ],
+            "education": [
+                {
+                    "institution": "OneBitCode",
+                    "degree": "TypeScript",
+                    "period": "nov 2024 - dez 2025"
+                },
+                {
+                    "institution": "FAINOR",
+                    "degree": "Bacharelado - Engenharia da Computação",
+                    "period": "fev 2019 - jul 2025"
+                }
+            ],
+            "links": {
+                "linkedin": "https://www.linkedin.com/in/thalison-botelho/"
+            },
+            "memberType": "member"
+        },
+        {
+            "id": "m11",
+            "name": "Ricardo Oliveira",
+            "role": "QA | Tester",
+            "avatarUrl": "https://media.licdn.com/dms/image/v2/D4D03AQHI8y-gS2TTxw/profile-displayphoto-crop_800_800/B4DZfQYpJCGsAQ-/0/1751547811359?e=1774483200&v=beta&t=bBeGjIcpL-2VRqV0oslbkuG9IP3oAvQRKi5LMeJ4b3U",
+            "bio": "Analista de QA com experiência em automação de testes e qualidade de software para projetos LATAM em e-commerce.",
+            "currentPosition": "Quality Assurance na Digital Hub",
+            "location": "São Paulo, SP",
+            "professionalHistory": [
+                {
+                    "role": "Quality Assurance",
+                    "company": "Digital Hub",
+                    "period": "jan 2024 - atual",
+                    "summary": "QA Tester pleno no projeto ASUS LATAM, com automação e testes manuais."
+                },
+                {
+                    "role": "QA",
+                    "company": "Infobase IT",
+                    "period": "jan 2022 - jan 2024",
+                    "summary": "Testes em projetos como Embrast, Panini Comics, Minerva Foods e Sebrae."
+                }
+            ],
+            "skills": [
+                "Automação de Testes",
+                "Testes Manuais",
+                "QA",
+                "E-Commerce",
+                "Magento",
+                "Desenvolvimento Front-End"
+            ],
+            "education": [
+                {
+                    "institution": "Centro Universitário Ateneu",
+                    "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+                    "period": "ago 2023 - dez 2025"
+                },
+                {
+                    "institution": "Alura",
+                    "degree": "Desenvolvedor Front-End",
+                    "period": "jan 2022 - dez 2022"
+                }
+            ],
+            "links": {
+                "linkedin": "https://www.linkedin.com/in/ricardo-oliveira-0a4673b0/"
+            },
+            "memberType": "member"
+        }
+    ]
 }

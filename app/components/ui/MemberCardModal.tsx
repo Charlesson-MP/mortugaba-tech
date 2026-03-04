@@ -57,7 +57,7 @@ export default function MemberModal({ open, member, onClose }: Props) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg px-3 py-2 text-text-secondary hover:bg-black/5 hover:text-text-primary transition"
+            className="cursor-pointer rounded-lg px-3 py-2 text-text-secondary transition hover:bg-black/5 hover:text-text-primary"
             aria-label="Fechar"
           >
             ✕
@@ -90,6 +90,34 @@ export default function MemberModal({ open, member, onClose }: Props) {
                   {member.bio}
                 </p>
               </div>
+
+              {member.professionalHistory && member.professionalHistory.length > 0 && (
+                <div>
+                  <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary">
+                    Histórico profissional
+                  </h4>
+                  <div className="mt-4 space-y-3">
+                    {member.professionalHistory.slice(0, 3).map((experience, index) => (
+                      <div
+                        key={`${experience.company}-${experience.role}-${index}`}
+                        className="rounded-lg border border-border-muted/70 bg-surface-alt p-3.5"
+                      >
+                        <p className="text-sm font-semibold text-text-primary">
+                          {experience.role} · {experience.company}
+                        </p>
+                        {experience.period && (
+                          <p className="mt-0.5 text-xs text-text-secondary/80">{experience.period}</p>
+                        )}
+                        {experience.summary && (
+                          <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                            {experience.summary}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Aside */}
@@ -105,9 +133,19 @@ export default function MemberModal({ open, member, onClose }: Props) {
                       Cargo
                     </span>
                     <span className="mt-1 block text-sm font-medium text-text-primary">
-                      {member.role}
+                      {member.currentPosition ?? member.role}
                     </span>
                   </li>
+                  {member.location && (
+                    <li>
+                      <span className="block text-[11px] font-medium uppercase tracking-widest text-text-secondary/60">
+                        Localização
+                      </span>
+                      <span className="mt-1 block text-sm font-medium text-text-primary">
+                        {member.location}
+                      </span>
+                    </li>
+                  )}
                   <li>
                     <span className="block text-[11px] font-medium uppercase tracking-widest text-text-secondary/60">
                       Tipo de Membro
@@ -118,6 +156,41 @@ export default function MemberModal({ open, member, onClose }: Props) {
                   </li>
                 </ul>
               </div>
+
+              {member.skills && member.skills.length > 0 && (
+                <div className="rounded-xl border border-border-muted bg-surface-alt p-5">
+                  <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary">
+                    Skills
+                  </h4>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {member.skills.slice(0, 10).map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-full border border-brand-accent/25 bg-brand-accent/10 px-2.5 py-1 text-xs font-medium text-brand-accent"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {member.education && member.education.length > 0 && (
+                <div className="rounded-xl border border-border-muted bg-surface-alt p-5">
+                  <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary">
+                    Escolaridade
+                  </h4>
+                  <div className="mt-4 space-y-3">
+                    {member.education.slice(0, 2).map((edu, index) => (
+                      <div key={`${edu.institution}-${index}`}>
+                        <p className="text-sm font-semibold text-text-primary">{edu.institution}</p>
+                        <p className="text-sm text-text-secondary">{edu.degree}</p>
+                        {edu.period && <p className="text-xs text-text-secondary/80">{edu.period}</p>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Social Links Card */}
               <div className="rounded-xl border border-border-muted bg-surface-alt p-5">
@@ -130,7 +203,7 @@ export default function MemberModal({ open, member, onClose }: Props) {
                       href={member.links.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center justify-center gap-2 rounded-lg bg-surface-base border border-border-muted px-4 py-2.5 text-sm font-medium text-text-primary transition hover:bg-black/5"
+                      className="flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-border-muted bg-surface-base px-4 py-2.5 text-sm font-medium text-text-primary transition hover:bg-black/5"
                     >
                       GitHub
                     </a>
@@ -140,7 +213,7 @@ export default function MemberModal({ open, member, onClose }: Props) {
                       href={member.links.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center justify-center gap-2 rounded-lg bg-brand-primary px-4 py-2.5 text-sm font-medium text-white transition hover:bg-brand-primary/90"
+                      className="flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-brand-primary px-4 py-2.5 text-sm font-medium text-white transition hover:bg-brand-primary/90"
                     >
                       LinkedIn
                     </a>

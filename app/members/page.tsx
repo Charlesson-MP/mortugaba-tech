@@ -6,18 +6,6 @@ import MemberModal from "@/app/components/ui/MemberCardModal";
 import membersData from "@/helpers/members.json";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-const ROLE_OPTIONS = [
-  "Front-end Developer",
-  "Back-end Developer",
-  "Full-Stack Developer",
-  "UI/UX Designer",
-  "DevOps Engineer",
-  "Mobile Developer",
-  "Data Scientist",
-  "Product Manager",
-  "QA Engineer",
-];
-
 const MEMBER_TYPE_OPTIONS = [
   { value: "founder", label: "Fundador" },
   { value: "member", label: "Membro" },
@@ -73,6 +61,12 @@ export default function MembersPage() {
     );
   }
 
+  const roleOptions = useMemo(() => {
+    return Array.from(new Set(membersData.items.map((m) => m.role))).sort((a, b) =>
+      a.localeCompare(b, "pt-BR")
+    );
+  }, []);
+
   const filteredMembers = useMemo(() => {
     const query = search.toLowerCase().trim();
 
@@ -83,7 +77,7 @@ export default function MembersPage() {
       })
       .filter((m) => {
         if (selectedRoles.length === 0) return true;
-        return selectedRoles.some((r) => m.role.includes(r));
+        return selectedRoles.some((r) => m.role === r);
       })
       .filter((m) => {
         if (selectedTypes.length === 0) return true;
@@ -190,7 +184,7 @@ export default function MembersPage() {
                           Cargo
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {ROLE_OPTIONS.map((role) => {
+                          {roleOptions.map((role) => {
                             const isActive = selectedRoles.includes(role);
                             return (
                               <button
