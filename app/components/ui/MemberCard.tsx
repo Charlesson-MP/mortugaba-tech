@@ -61,7 +61,7 @@ export default function MemberCard({ member, onOpen }: Props) {
       </div>
 
       <div className="mb-4">
-        <h3 className="text-lg font-semibold text-text-primary transition-colors group-hover:text-brand-accent">
+        <h3 className="text-lg font-semibold text-text-primary transition-colors md:group-hover:text-brand-accent">
           {member.name}
         </h3>
         <p className="text-sm text-text-secondary">{member.role}</p>
